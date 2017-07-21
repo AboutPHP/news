@@ -1,0 +1,15 @@
+{extend name="base/base"/}
+
+{block name="style"}
+{/block}
+
+{block name="body"}
+    {volist name="special.keyword" id="vo"}
+    {$vo.id}-{$vo.name}
+    {/volist}
+{/block}
+
+{block name="script"}
+
+{/block}
+

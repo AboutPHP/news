@@ -1,0 +1,57 @@
+/**
+ *  Created by Administrator on 2017/2/22.
+ *  auther:allen;
+ * */
+
+@charset "utf-8";
+*{
+margin:0;
+padding:0;
+border:0;
+}
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form
+,fieldset,legend,input,textarea,select
+{margin:0;padding:0}
+body{
+	    font: 12px/1.125 "Microsoft Yahei","SimSun",Arial,simsun,Helvetica,sans-serif,simsun;
+    /*font:12px"宋体","Arial Narrow",HELVETICA;*/
+    background:#fff;
+    -webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none;cursor: pointer}
+a:hover{text-decoration:none;}
+em{font-style:normal}
+i{font-style: normal}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+
+
+body{
+	max-width:1920px;
+	margin:0 auto;
+	background-color:#ffffff;
+}
+ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  
+}
+.none{
+    display:none;
+}
+.clearfloat:after{
+    content:".";
+    display:block;
+    clear:both;
+    visibility: hidden;
+    height:0;
+}
+
+
+
+
+
+

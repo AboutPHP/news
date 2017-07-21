@@ -1,0 +1,81 @@
+body {
+    width: 100%;
+    height: auto;
+}
+body section {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+body section .newscontent {
+    width: 100%;
+    height: auto;
+    margin-top: 22px;
+}
+body section .newscontent .newscenter {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*body section .newscontent .newscenter .hasnews {*/
+    /*width: 100%;*/
+    /*height: 44px;*/
+    /*background-color: #77b0f6;*/
+    /*font-size: 14px;*/
+    /*color: #ffffff;*/
+    /*text-align: center;*/
+    /*line-height: 44px;*/
+    /*border-radius: 5px;*/
+    /*margin-top: 22px;*/
+    /*cursor: pointer;*/
+    /*position: relative;*/
+/*}*/
+/*body section .newscontent .newscenter .hasnews .cancel {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 10px;*/
+/*}*/
+
+body section .newscontent .newscenter .newsList {
+    width: 100%;
+    height: auto;
+    margin-top: 22px;
+}
+body section .newscontent .newscenter .newsList .kanver {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+}
+body section .newscontent .newscenter .newsList .kanver .olist {
+    flex: 1.5;
+    -webkit-flex: 1.5;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+body section .newscontent .newscenter .newsList .kanver .olist:hover {
+    background-color: #e2e7e7;
+    color: #0bb9c2;
+    border-bottom: 2px solid #0bb9c2;
+}
+body section .newscontent .newscenter .newsList .kanver .bot {
+    background-color: #e2e7e7;
+    color: #0bb9c2;
+    border-bottom: 2px solid #0bb9c2;
+}
+body section .newscontent .newscenter .news{
+    width:100%;
+    float: left;
+    margin-top:15px;
+}
+body section .newscontent .newscenter .news .news-left{
+    width:835px;
+    float: left;
+}
+
+
+

@@ -1,0 +1,193 @@
+@charset "utf-8";
+/**
+   created by author: allen
+   time:2017/6/29
+   effect:用户中心注册页面的样式
+*/
+body {
+  max-width: 1920px;
+  height: 650px;
+  margin: 0 auto;
+  background: url(../images/background.jpg) no-repeat center;
+  background-size: 1920px 650px;
+}
+body section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+body section .headerRegister {
+  width: 920px;
+  height: 70px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+body section .headerRegister .header-con {
+  width: auto;
+  height: auto;
+  float: left;
+}
+body section .headerRegister .header-con .header-left {
+  width: 185px;
+  height: 60px;
+  float: left;
+}
+body section .headerRegister .header-con .header-left:after {
+  content: "";
+  width: 2px;
+  height: 35px;
+  background-color: #555555;
+  display: block;
+  float: right;
+  margin-left: 15px;
+  margin-top: 22px;
+}
+body section .headerRegister .header-con .register {
+  font-size: 25px;
+  color: #333333;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+body section .headerRegister .histyor {
+  float: right;
+}
+body section .headerRegister .histyor > a {
+  font-size: 14px;
+  color: #555555;
+  line-height: 80px;
+}
+body section .headerRegister .histyor > span {
+  color: #555555;
+  margin: 0 5px;
+}
+body section .register-body {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+body section .register-body .register-cer {
+  width: 915px;
+  height: 425px;
+  margin: 0 auto;
+  background-color: #f0f9ff;
+  border: 1px solid #3cc1c8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+body section .register-body .register-cer .register-over {
+  width: 335px;
+  height: 100%;
+  margin: 0 auto;
+}
+body section .register-body .register-cer .register-over .login {
+  border-bottom: 1px dashed #dddddd;
+  font-size: 14px;
+  color: black;
+  margin-top: 40px;
+  text-align: right;
+  padding-bottom: 10px;
+}
+body section .register-body .register-cer .register-over .login > a {
+  color: #8dc256;
+}
+body section .register-body .register-cer .register-over form {
+  margin-top: 30px;
+}
+body section .register-body .register-cer .register-over form label {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+body section .register-body .register-cer .register-over form label .imell {
+  font-size: 14px;
+  color: #333333;
+}
+body section .register-body .register-cer .register-over form label input[type='text'] {
+  width: 238px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #dddddd;
+  padding-left: 10px;
+}
+body section .register-body .register-cer .register-over form label input[type='password'] {
+  width: 238px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #dddddd;
+  padding-left: 10px;
+}
+body section .register-body .register-cer .register-over form label input[name='Verification'] {
+  width: 95px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #dddddd;
+  padding-left: 10px;
+}
+body section .register-body .register-cer .register-over form label .prompt {
+  position: absolute;
+  right: -120px;
+  top: 10px;
+  color: red;
+}
+body section .register-body .register-cer .register-over form label .prompt2 {
+  position: absolute;
+  right: -120px;
+  top: 10px;
+  color: blue;
+}
+body section .register-body .register-cer .register-over form label .getVerifica {
+  width: 95px;
+  height: 30px;
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  color: #333333;
+  line-height: 30px;
+  text-align: center;
+  margin-left: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+body section .register-body .register-cer .register-over form .agreement {
+  margin-top: 20px;
+}
+body section .register-body .register-cer .register-over form .agreement .cli {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  cursor: pointer;
+  float: left;
+}
+body section .register-body .register-cer .register-over form .agreement .cli > img {
+  margin-left: 3px;
+}
+body section .register-body .register-cer .register-over form .agreement .cli-font {
+  display: block;
+  font-size: 12px;
+  color: black;
+  margin-left: 10px;
+  float: left;
+  margin-top: 2px;
+}
+body section .register-body .register-cer .register-over form .submit {
+  display: block;
+  margin-top: 30px;
+}
+body section .register-body .register-cer .register-over form .submit input[type='submit'] {
+  display: block;
+  width: 135px;
+  height: 30px;
+  background-color: #acd668;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}

@@ -1,0 +1,100 @@
+/*
+  time:2017/7/7
+  create by author:allen
+  effect:新闻详情页的内容样式
+*/
+
+body{
+    width:100%;
+    margin:0 auto;
+}
+body section{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+.con{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    margin-top:30px;
+}
+.con .con-ter{
+    width:1300px;
+    margin:0 auto;
+}
+.con .con-ter .xiangqing-left{
+    width:827px;
+    float: left;
+}
+.con .con-ter .xiangqing-left .title{
+    font-size:36px;
+    font-weight:bold;
+    color:black;
+    line-height:50px;
+}
+.con .con-ter .xiangqing-left .time-date{
+    width:100%;
+    margin-top:20px;
+}
+.time{
+    float: left;
+}
+.time>span{
+    font-size:14px;
+    color: #999999;
+}
+.time-author{
+    float: left;
+    margin-left:84px;
+    font-size:14px;
+    color: #999999;
+}
+.time-opic{
+    float:right;
+}
+.time-opic>span{
+    font-size:14px;
+    color: #999999;
+}
+.time-opic>span:nth-child(2){
+    margin-left:30px;
+}
+.time-opic>span:nth-child(3){
+    margin-left:18px;
+}
+.time-opic>span .col{
+    color: #ff822e;
+}
+.time-opic>span .olr{
+    color: #e50011;
+}
+.con .con-ter .xiangqing-left .size{
+    padding:20px 10px;
+    background: #f9f9f9;
+    text-indent:20px;
+    font-size:14px;
+    color: #333333;
+    line-height:25px;
+    margin-top:40px;
+}
+.con .con-ter .xiangqing-left .application{
+    width:100%;
+}
+.con .con-ter .xiangqing-left .application p{
+    font-size:16px;
+    color: #555555;
+    line-height:30px;
+    text-indent:20px;
+    margin-top:20px;
+}
+.con .con-ter .xiangqing-left .ondefirst{
+    width:100%;
+}
+
+
+
+
+
+
+

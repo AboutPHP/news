@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--添加全局样式-->
+    <link rel="stylesheet" href="__STATIC__/index/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/common/css/reset.css" />
+    <link rel="stylesheet" href="__STATIC__/index/common/head/index.css" />
+    <link rel="stylesheet" href="__STATIC__/index/common/head/style.css" />
+    <link rel="stylesheet" href="__STATIC__/index/common/css/listcontent.css" />
+    <link rel="stylesheet" href="__STATIC__/index/common/css/userdata.css" />
+    <link rel="stylesheet" href="__STATIC__/index/index/css/aside.css"  type="text/css" charset="UTF-8" media="all" />
+    <!--添加全局脚本-->
+
+    <!--<script src="__ROOT__/static/node_modules/seajs/dist/sea.js"></script>-->
+    {block name="style"}{/block}
+
+</head>
+<!--top-->
+<body>
+<!-- 顶部 -->
+{block name="top"}
+    {include file="base/top-line"/}
+{/block}
+
+<!-- 头部 -->
+{block name="header"}
+    {include file="base/header-line"/}
+{/block}
+
+<!-- 主体 -->
+{block name="body"}{/block}
+
+<!-- 脚部 -->
+{block name="footer"}
+    {include file="base/footer-line"/}
+{/block}
+
+<!-- 底部 -->
+{block name="bottom"}
+    {include file="base/bottom-line"/}
+{/block}
+
+<script src="__STATIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+<script src="__STATIC__/admin/js/laypage/laypage.js"></script>
+<script src="__STATIC__/admin/js/laytpl/laytpl.js"></script>
+<script src="__STATIC__/admin/js/layer/layer.js"></script>
+<script src="__STATIC__/index/common/js/poss.js"></script>
+<script src="__STATIC__/index/common/js/newsov.js"></script>
+<script src="__STATIC__/index/common/js/loadmore.js"></script>
+<script>
+//    seajs.config({
+//        base: '__ROOT__/static/',
+//        alias: {
+//            'jquery': "node_modules/jquery/dist/jquery.js",
+//            'main':'home/wiki/details/js/main.js'
+//        }
+//    });
+//    seajs.use(['main'], function () {});
+</script>
+
+<!-- 用于加载js代码 -->
+{block name="script"}{/block}
+
+<div class="hidden">
+    {block name="hidden"}{/block}
+</div>
+</body>
+</html>

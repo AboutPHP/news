@@ -1,0 +1,195 @@
+@charset "utf-8";
+/*time:2017/6/30
+  created by author:allen
+  effect: 用户中心公共头部分，尾部分的样式。
+*/
+
+
+/*公共头部分样式*/
+.header {
+    width: 100%;
+    height: 28px;
+    background-color: #f5f5f5;
+}
+.header .header-ter {
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.header .header-ter .item-left {
+    float: left;
+    line-height: 30px;
+}
+.header .header-ter .item-left .health-index > a {
+    font-size: 12px;
+    color: black;
+}
+.header .header-ter .item-left .divide {
+    margin-left: 5px;
+    margin-right: 18px;
+}
+.header .header-ter .item-left .phone {
+    font-size: 12px;
+    position: relative;
+}
+.header .header-ter .item-left .phone .icon-shouji {
+    font-size: 20px;
+    color: #84be43;
+    position: absolute;
+    top: -5px;
+    left: -17px;
+}
+.header .header-ter .item-right {
+    float: right;
+    line-height: 25px;
+}
+.header .header-ter .item-right .itrm-li .every {
+    float: left;
+    margin-left: 35px;
+}
+.header .header-ter .item-right .itrm-li .every .sun {
+    position: relative;
+}
+.header .header-ter .item-right .itrm-li .every .sun > a {
+    font-size: 12px;
+    color: black;
+}
+.header .header-ter .item-right .itrm-li .every .sun .icon-daosanjiao {
+    font-size: 30px;
+    position: absolute;
+    top: -3px;
+    right: -22px;
+    cursor: pointer;
+}
+.header .header-ter .item-right .itrm-li .every3 > a {
+    font-size: 12px;
+    color: black;
+}
+.header .header-ter .item-right .itrm-li .every4,
+.header .header-ter .item-right .itrm-li .every5 {
+    margin-left: 25px;
+}
+.header-bottom {
+    width: 100%;
+    height: 89px;
+    background-color: #d3eacd;
+}
+.header-bottom .header-conter {
+    width: 1030px;
+    height: 100%;
+    margin: 0 auto;
+}
+.header-bottom .header-conter .piv-left {
+    float: left;
+    width: 161px;
+    height: auto;
+    margin-left: -172px;
+}
+.header-bottom .header-conter .piv-left > img {
+    margin-top: 10px;
+}
+.header-bottom .header-conter .centent-ter {
+    float: left;
+    margin-left: 60px;
+}
+.header-bottom .header-conter .centent-ter .popel {
+    width: 120px;
+    height: 89px;
+    float: left;
+}
+.header-bottom .header-conter .centent-ter .popel > a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 89px;
+    position: relative;
+}
+.header-bottom .header-conter .centent-ter .popel1 {
+    position: relative;
+}
+.header-bottom .header-conter .centent-ter .popel1 .child {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    display: none;
+}
+.header-bottom .header-conter .centent-ter .popel1 .child .child-over {
+    width: 110px;
+    height: 30px;
+    background-color: black;
+}
+.header-bottom .header-conter .centent-ter .popel1 .child .child-over > a {
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+}
+.header-bottom .header-conter .form-right {
+    float: right;
+    height: 89px;
+    line-height: 89px;
+}
+.header-bottom .header-conter .form-right form {
+    width: 227px;
+    height: 89px;
+    position: relative;
+    display: inline-block;
+}
+.header-bottom .header-conter .form-right form input[type='text'] {
+    width: 217px;
+    height: 30px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 10px;
+}
+.header-bottom .header-conter .form-right form > a {
+    width: 40px;
+    height: 30px;
+    background-color: #84be43;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.header-bottom .header-conter .form-right .newgive {
+    width: 92px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-left: 25px;
+    border: 1px solid #d64e58;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #d64e58;
+}
+/*公共尾部分样式*/
+.footer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.footer .maxlebgth-list-font {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer .maxlebgth-list-font .iowe {
+    font-size: 12px;
+    color: #a8a8a8;
+    margin-top: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,154 @@
+
+body section .personal .personal-ter .personal-right{
+    float: right;
+    width:782px;
+    height:auto;
+    margin-top:30px;
+}
+body section .personal .personal-ter .personal-right>p{
+    font-size:16px;
+    color: #84be43;
+    text-align: left;
+    padding-bottom:20px;
+    border-bottom:1px solid #ebebeb;
+}
+body section .personal .personal-ter .personal-right>form{
+    margin-top:10px;
+    width:100%;
+}
+body section .personal .personal-ter .personal-right>form label{
+    border-bottom:1px dashed #ebebeb;
+    display: block;
+    margin:0 auto;
+    padding-top:20px;
+}
+body section .personal .personal-ter .personal-right>form label .ban{
+    color: #626262;
+    font-size:12px;
+}
+body section .personal .personal-ter .personal-right>form label input[type='text']{
+    width:538px;
+    height:28px;
+    outline:none;
+    border:1px solid #ebebeb;
+    padding-left:15px;
+    margin-bottom:20px;
+}
+body section .personal .personal-ter .personal-right>form label select{
+    width:538px;
+    height:28px;
+    outline:none;
+    border:1px solid #ebebeb;
+    padding-left:15px;
+    margin-bottom:20px;
+}
+body section .personal .personal-ter .personal-right>form label .pic-oepr{
+    width:66px;
+    height:32px;
+    display: inline-block;
+    text-align: center;
+    line-height:32px;
+    background-color: #84be43;
+    font-size:12px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body section .personal .personal-ter .personal-right>form label textarea{
+    width:643px;
+    height:343px;
+    outline: none;
+    border:1px solid #ebebeb;
+    margin-bottom: 20px;
+}
+.ofirst{
+    width:644px;
+    height:auto;
+    margin:0 auto;
+}
+.chair{
+    display: inline-block;
+    width:67px;
+    height:30px;
+    background-color:#84be43;
+    color: white;
+    text-align: center;
+    line-height:30px;
+    font-size:12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ol_tes{
+    display:inline-block;
+    width:45px;
+    height:30px;
+    background-color:#ed5466;
+    color: white;
+    text-align: center;
+    line-height:30px;
+    font-size:12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:20px;
+    margin-left:30px;
+}
+.ban1{
+    display: block;
+    float: left;
+    margin-left:45px;
+}
+/*额外样式：控制文本编辑器的边距*/
+.clearfloat{
+    padding-bottom:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

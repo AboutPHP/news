@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="allen" content="用户中心的登录页面">
+    <link rel="stylesheet" href="__STATIC__/index/ucenter/css/reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="__STATIC__/index/ucenter/css/login.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+   <section>
+       <!--header-->
+       <div class="header clearfloat">
+           <div class="header-con clearfloat">
+               <div class="header-left">
+                   <img src="__STATIC__/index/ucenter/images/logo.png" alt="" />
+               </div>
+               <span class="register">用户登录</span>
+           </div>
+       </div>
+       <!--login-->
+       <div class="login">
+           <div class="login-con clearfloat">
+               <div class="pic-left">
+                    <img src="__STATIC__/index/ucenter/images/happy.png" />
+               </div>
+               <div class="con-right">
+                   <p class="member">会员登录</p>
+                   <form method="post" >
+                        <label>
+                            <input type="text" name="username" placeholder="手机号/邮箱" />
+                        </label>
+                        <label>
+                            <input type="password" name="password" placeholder="密码" />
+                            <span style="color: red; font-size: 14px;margin-top: 5px;">{$error_info['message']}</span>
+                        </label>
+                        <a class="forget">忘记密码</a>
+                        <input type="submit" value="登 录" onclick="login()"/>
+
+                   </form>
+                   <div class="effect-ober clearfloat">
+                       <div class="oepr-list clearfloat">
+                           <span class="kover">
+                               <img src="__STATIC__/index/ucenter/images/duigou.png" />
+                           </span>
+                           <span class="tyoru">下次自动登录</span>
+                       </div>
+                       <a href="{:url('manager/register')}" target="_blank" onclick="reg()">新用户注册</a>
+                   </div>
+                   <div style="width: 100%;height: 0; border: 1px dashed #eaeaea; margin-top:28px;"></div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!--尾部开始-->
+   {include file="../application/index/view/public/footer.html" /}
+   <!--尾部结束-->
+</body>
+<script type="text/javascript">
+//    var form = document.forms[0];
+//    form.onsubmit = function(e){
+//        var e = e || event;
+//        e.preventDefault();
+//    };
+    form.username.onfocus = function(){
+        this.setAttribute("placeholder"," ");
+    };
+    form.username.onblur = function(){
+        this.setAttribute("placeholder","手机号/邮箱");
+    };
+    form.password.onfocus = function(){
+        this.setAttribute("placeholder"," ");
+    };
+    form.password.onblur = function(){
+        this.setAttribute("placeholder","密码");
+    };
+</script>
+</html>

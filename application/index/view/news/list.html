@@ -1,0 +1,325 @@
+{extend name="base/base"/}
+
+{block name="style"}
+<link rel="stylesheet" href="__STATIC__/index/news/css/newlist.css"  type="text/css" charset="UTF-8" media="all" />
+{/block}
+
+{block name="body"}
+<section>
+    <div class="search">
+        <div class="search_con">
+            <div class="radio">已有<span>25684</span>位用户建立健康档案</div>
+            <div class="search_box">
+                <form id="form1" name="form1" method="post" action="">
+                    <input name="textfield" type="text" class="search_input" id="textfield" placeholder="高血压" />
+                    <a class="search_button" href="javascript:;"></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--news-Content-->
+    <div class="newscontent">
+        <div class="newscenter">
+            <!--是否出现未读新闻-->
+            <!--<div class="hasnews">您有未读的新闻，点击查看<span class="cancel"><img src="/static/index/news/images/cancel.png" /></span></div>-->
+            <!--list-->
+            <div class="newsList">
+                <div class="kanver">
+                    {volist name="cate_info" id="v" key="k" offset="0" length='11'}
+                        <div class="olist bot-{$k}" >{$v.name}<span class="th" style="display: none;">{$v.id}</span></div>
+                    {/volist}
+                </div>
+            </div>
+            <!--news-content-->
+            <div class="news clearfloat">
+                <div class="news-left">
+                    <div class="list-bottom">
+                        <script id="template" type="text/html">
+                            {{# for(var i=0;i<d.length;i++){  }}
+                            {{# if(d[i].id%2 != 0){ }}
+                            <div class="list-lie clearfloat">
+                                <div class="list-con">
+                                    <img src="/uploads/images/{{d[i].photo}}" alt="没有图片"/>
+                                </div>
+                                <div class="list-con left">
+                                    <p class="font">{{d[i].title}}</p>
+                                    <p class="font1">{{d[i].remark}}</p>
+                                    <div class="point clearfloat">
+                                        <span class="time">{{d[i].create_time}}</span>
+                                                <span class="pinglun">
+                                                     <a class="lun-diop" href="javascipt:;" target="_blank">评论</a>
+                                                     <span>|</span>
+                                                     <a class="fenxian" href="javascipt:;" target="_blank">分享</a>
+                                                 </span>
+                                    </div>
+                                </div>
+                                <a href="/index/news/detail/id/{{d[i].id}}" target="_blank"></a>
+                            </div>
+                            {{# }else{ }}
+                            <div class="list-lie list-lie1">
+                                <div class="list-con1">
+                                    <p class="font">{{d[i].title}}</p>
+                                    <p class="font1">{{d[i].remark}} </p>
+                                    <div class="point clearfloat">
+                                        <span class="time">{{d[i].create_time}}</span>
+                                             <span class="pinglun">
+                                                 <a class="lun-diop" href="javascipt:;" target="_blank">评论</a>
+                                                 <span>|</span>
+                                                 <a class="fenxian" href="javascipt:;" target="_blank">分享</a>
+                                             </span>
+                                    </div>
+                                </div>
+                                <a href="/index/news/detail/id/{{d[i].id}}" target="_blank"></a>
+                            </div>
+                            {{# } }}
+                            {{# } }}
+                        </script>
+                        <div class="list1">
+                            <div style="display: block;" class="every-list" id="list"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-right">
+                    <div class="news-nav">
+                        <ul class="news-lie">
+                            <li class="new-list">
+                                <div class="con-header clearfloat">
+                                    <a href="javascript:;" target="_blank">
+                                         <span>
+                                             <img src="/static/index/news/images/onsize.jpg" alt=""/>
+                                         </span>
+                                        <span class="jian">|</span>
+                                        <span>食品安全共治新升级</span>
+                                    </a>
+                                    <span>-</span>
+                                </div>
+                                <div class="con-none">
+                                    <div class="con-opwe  clearfloat">
+                                        <img src="/static/index/news/images/none.jpg" alt=""/>
+                                        <p>6月29日，2017全国食品安全宣传周拉开序幕。围绕“尚德守法，共治共享食品安全”。</p>
+                                        <a href="javascript:;" target="_blank"></a>
+                                    </div>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="new-list">
+                                <div class="con-header clearfloat">
+                                    <a href="javascript:;" target="_blank">
+                                         <span>
+                                             <img src="/static/index/news/images/onsize2.png" alt=""/>
+                                         </span>
+                                        <span class="jian">|</span>
+                                        <span>慢病防控是全社会的责任</span>
+                                    </a>
+                                    <span>+</span>
+                                </div>
+                                <div class="con-none">
+                                    <div class="con-opwe  clearfloat">
+                                        <img src="/static/index/news/images/none.jpg" alt=""/>
+                                        <p>6月29日，2017全国食品安全宣传周拉开序幕。围绕“尚德守法，共治共享食品安全”。</p>
+                                        <a href="javascript:;" target="_blank"></a>
+                                    </div>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="new-list">
+                                <div class="con-header clearfloat">
+                                    <a href="javascript:;" target="_blank">
+                                         <span>
+                                             <img src="/static/index/news/images/onsize3.png" alt=""/>
+                                         </span>
+                                        <span class="jian">|</span>
+                                        <span>入园不哭不闹≠一切都好</span>
+                                    </a>
+                                    <span>+</span>
+                                </div>
+                                <div class="con-none">
+                                    <div class="con-opwe  clearfloat">
+                                        <img src="/static/index/news/images/none.jpg" alt=""/>
+                                        <p>6月29日，2017全国食品安全宣传周拉开序幕。围绕“尚德守法，共治共享食品安全”。</p>
+                                        <a href="javascript:;" target="_blank"></a>
+                                    </div>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="new-list">
+                                <div class="con-header clearfloat">
+                                    <a href="javascript:;" target="_blank">
+                                         <span>
+                                             <img src="/static/index/news/images/onsize4.png" alt=""/>
+                                         </span>
+                                        <span class="jian">|</span>
+                                        <span>如何保护好膝盖关节</span>
+                                    </a>
+                                    <span>+</span>
+                                </div>
+                                <div class="con-none">
+                                    <div class="con-opwe  clearfloat">
+                                        <img src="/static/index/news/images/none.jpg" alt=""/>
+                                        <p>6月29日，2017全国食品安全宣传周拉开序幕。围绕“尚德守法，共治共享食品安全”。</p>
+                                        <a href="javascript:;" target="_blank"></a>
+                                    </div>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="new-list new-list5">
+                                <div class="con-header clearfloat">
+                                    <a href="javascript:;" target="_blank">
+                                         <span>
+                                             <img src="/static/index/news/images/onsize5.png" alt=""/>
+                                         </span>
+                                        <span class="jian">|</span>
+                                        <span>外卖"黑作坊"一条街曝光</span>
+                                    </a>
+                                    <span>+</span>
+                                </div>
+                                <div class="con-none">
+                                    <div class="con-opwe  clearfloat">
+                                        <img src="/static/index/news/images/none.jpg" alt=""/>
+                                        <p>6月29日，2017全国食品安全宣传周拉开序幕。围绕“尚德守法，共治共享食品安全”。</p>
+                                        <a href="javascript:;" target="_blank"></a>
+                                    </div>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                    <p class="ul-point clearfloat">
+                                        <a href="javascript:;" target="_blank">
+                                            <span></span>
+                                            <span>多地来取经，佛山高明食品安全监管有一套</span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fixed">
+                        <div class="top">
+                            <p class="top-onrt">当日TOP榜</p>
+                            <ul class="list-top">
+                                {volist name="right_info" id="vo" key="k" offset="0" length='10'}
+                                <li class="first-list">
+                                    <a href="{:url('news/detail',['id'=>$vo['id']])}" target="_blank">
+                                        <i class="colr">{$k}</i>
+                                        <span>{$vo['title']|mb_substr=0,17,"utf-8"}</span>
+                                    </a>
+                                </li>
+                                {/volist}
+                            </ul>
+                        </div>
+
+                        <div class="news-tis">
+                            <a href="javascript:;" target="_blank">
+                                <img src="/static/index/news/images/comlist.jpg" alt=""/>
+                                <span class="title">[一问医答]母乳喂养4误区,你中了吗？</span>
+                                <span class="title-con">据世界卫生组织的数据显示，在每名儿童出生的头一个小时里就进行母乳喂养，在最初6个月内仅使用母乳，并继续进行母乳喂养直至两岁。</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{/block}
+
+{block name="script"}
+<script type="text/javascript">
+    var config = {};
+    config.isAjax = true;
+
+    $.loadmore.get(getData,{
+        scroll: true,  //默认是false,是否支持滚动加载
+        size:5,  //分页数
+        offset:2,//第几页
+        flag: 1, //自定义参数，可选，示例里没有用到
+    });
+    $('.olist').on('click',function(){
+        $('.olist').removeClass('bot-1');
+        $(this).addClass('bot-1');
+        getData(config,1,5)
+    });
+    getData(config,1,5);
+
+    function getData(config,offset,size){
+        var cate_id = $('.bot-1 span').text();
+        config.isAjax = true;
+        $.ajax({
+            type: 'GET',
+            data: {'cate_id':cate_id,'page':offset,'limit':size},
+            url: "{:url('index/art_show')}",
+            dataType: 'json',
+            success: function(reponse){
+                config.isAjax = false;
+                config.offset = reponse.current_page+1;
+                if (reponse.current_page == reponse.pages){
+                    config.isEnd = true;
+                }
+                if (offset == 1){
+                    list(reponse.data);
+                }else {
+                    nextlist(reponse.data);
+                }
+            },
+        });
+    }
+    function list(list){
+        var tpl = document.getElementById('template').innerHTML;
+        laytpl(tpl).render(list, function(html){
+            document.getElementById('list').innerHTML = html;
+        });
+    }
+    function nextlist(list){
+        var tpl = document.getElementById('template').innerHTML;
+        laytpl(tpl).render(list, function (html) {
+            document.getElementById('list').innerHTML = document.getElementById('list').innerHTML+html;
+        });
+    }
+</script>
+{/block}

@@ -1,0 +1,79 @@
+{include file="public/header" /}
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <!-- Panel Other -->
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>举报列表</h5>
+        </div>
+        <div class="ibox-content">
+            <div class="example-wrap">
+                <div class="example">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr class="long-tr">
+                            <th>举报者ID</th>
+                            <th>举报者IP</th>
+                            <th>举报内容</th>
+                            <th>创建时间</th>
+                            <th>文章标题</th>
+                            <th>举报类型</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="report_list">
+                        {notempty name="data"}
+                        {volist name="data" id="vo"}
+                        <tr class="long-td" data-article_id="{$vo.article_id}">
+                            <td>{$vo.uid}</td>
+                            <td>{$vo.ip}</td>
+                            <td>{$vo.content}</td>
+                            <td>{$vo.create_time}</td>
+                            <td>{$vo.title}</td>
+                            <td>{$vo.report|ArticleReport}</td>
+                            <td>
+                                <a href="javascript:;" data-url="{:url('ArticleReport/articleReportDel')}" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash-o"></i> 删除举报信息</a>
+                                <a href="javascript:;" data-url="{:url('article/del_ad')}" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash-o"></i> 删除新闻</a>
+                            </td>
+                        </tr>
+                        {/volist}
+                        {else /}
+                        <td colspan="7" class="text-center"> 暂无备份数据</td>
+                        {/notempty}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- End Example Pagination -->
+        </div>
+    </div>
+</div>
+<!-- End Panel Other -->
+</div>
+
+
+{include file="public/footer" /}
+
+<script type="text/javascript">
+    $('.btn-danger').click(function (danger) {
+        var danger = $(this)
+        var id = $('.long-td').data('article_id');
+        var url = danger.data('url');
+        layer.confirm('确认删除?', {icon: 3, title:'提示'}, function(index){
+            $.getJSON(url, {'id' : id}, function(res){
+                console.log(res)
+                if(res.code == 1){
+                    danger.parent().parent().remove();
+                    layer.msg('删除成功',{icon:1,time:1500});
+                }else{
+                    layer.msg('删除失败',{icon:0,time:1500});
+                }
+            });
+            layer.close(index);
+        })
+    })
+</script>
+</body>
+</html>

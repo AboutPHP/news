@@ -1,0 +1,77 @@
+@charset "utf-8";
+body {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+body section {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+body section .personal .personal-ter .personal-right {
+    float: right;
+    width: 800px;
+    height: auto;
+    margin-top: 20px;
+}
+.datasummary{
+    width:100%;
+    height:auto;
+}
+.every{
+    float: left;
+    margin-left:60px;
+}
+.every>p{
+    width:100%;
+    text-align:center;
+    font-size:18px;
+    color: #000000;
+    margin-top:16px;
+}
+body section .personal .personal-ter .personal-right .article{
+    margin-top:45px;
+}
+body section .personal .personal-ter .personal-right .article .aritcle-font{
+    font-size:18px;
+    line-height: 36px;
+}
+body section .personal .personal-ter .personal-right .article .aritcle-font:before{
+    content: '';
+    float: left;
+    display:block;
+    width:5px;
+    height:36px;
+    background-color:#86bf46;
+    margin-right:13px;
+}
+table{
+    width:100%;
+    margin-top:15px;
+    font-size:14px;
+    font-family:"微软雅黑";
+    border:1px solid #e8e8e8;
+}
+table tbody{
+    width:100%;
+    font-size:14px;
+    font-family:"微软雅黑";
+}
+table tbody th{
+    height:53px;
+    text-align: center;
+    font-size:14px;
+    background: #ffe7d7;
+    border:1px solid #e8e8e8;
+}
+table tbody td{
+    height:53px;
+    text-align: center;
+    font-size:14px;
+    border:1px solid #e8e8e8;
+}
+
+
+

@@ -1,0 +1,163 @@
+{extend name="base/base"/}
+
+{block name="style"}
+<link rel="stylesheet" href="__STATIC__/index/ucenter/css/news.css" type="text/css" charset="utf-8" />
+<link href="__STATIC__/admin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+<link href="__STATIC__/admin/css/style.min.css?v=4.1.0" rel="stylesheet">
+
+<style type="text/css">
+    .long-tr th{
+        text-align: center;
+    }
+    .long-td td{
+        text-align: center;
+    }
+</style>
+{/block}
+
+{block name="body"}
+<section>
+    <!--个人中心-->
+    <div class="personal">
+        <div class="personal-ter clearfloat">
+            {include file="news/left-menu"/}
+            <!--right-->
+            <div class="personal-right">
+                <div class="nav-top">
+                    <ul class="nav-list" >
+                        <li class="left status-1" style="margin-left: 14px;"><a href="#">错误信息</a></li>
+                    </ul>
+                </div>
+                <div class="nav-bottom">
+                    <table class="table table-bordered table-hover">
+
+                        <thead>
+                            <tr class="long-tr">
+                                <th width="15%">新闻标题</th>
+                                <th width="15%">错误内容</th>
+                                <th width="11%">所属分类</th>
+                                <th width="15%">建议</th>
+
+                                <th width="10%">错误时间</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                        </thead>
+                        <script id="template" type="text/html">
+                           {{# for(var i=0;i<d.length;i++){  }}
+                            <tr class="long-td" >
+                                <td >{{d[i].title}}</td>
+                                <td >{{d[i].content}}</td>
+                                {{# if(d[i].type == 0){ }}
+                                    <td >错别字</td>
+                                {{# }else if(d[i].type == 1){ }}
+                                    <td >成语用词不当</td>
+                                {{# }else if(d[i].type == 2){ }}
+                                    <td >专业术语写法不规则</td>
+                                {{# }else if(d[i].type == 3){ }}
+                                    <td >产片与图片不符合</td>
+                                {{# }else if(d[i].type == 4){ }}
+                                    <td >事实年代以及内容错误</td>
+                                {{# }else if(d[i].type == 5){ }}
+                                    <td >技术参数错误</td>
+                                {{# }else{ }}
+                                    <td >其他</td>
+                                {{# } }}
+                                <td >{{d[i].advice}}</td>
+
+                                <td >{{d[i].create_time}}</td>
+                                <td>
+                                    <a href="javascript:;" onclick="edit_dot({{d[i].id}},{{d[i].article_id}})" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash-o"></i> 修&nbsp;改</a>
+                                    <!--<a href="javascript:;" onclick="del_dot('{{d[i].id}}')" >-->
+                                        <!--<i class="fa fa-paste btn btn-danger btn-xs">删除</i>-->
+                                    <!--</a>-->
+                                </td>
+                            </tr>
+                           {{# } }}
+                        </script>
+                        <tbody class="every-list" id="list"></tbody>
+                    </table>
+
+                    <div id="AjaxPage" style="text-align:right;"></div>
+                    <div id="allpage" style=" text-align: right;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{/block}
+
+{block name="script"}
+
+<script src="__STATIC__/admin/js/layer/layer.js"></script>
+<script src="__STATIC__/admin/js/laypage/laypage.js"></script>
+<script src="__STATIC__/admin/js/laytpl/laytpl.js"></script>
+
+<script type="text/javascript">
+    var personalRight = document.getElementsByClassName("personal-right")[0];
+    var firstSize = personalRight.firstElementChild.firstElementChild.children;
+    var lastSize = personalRight.lastElementChild.children;
+
+    for(var i=0;i<firstSize.length;i++){
+        firstSize[i].onclick = function(){
+            for(var i=0;i<firstSize.length;i++){
+                if(firstSize[i] == this){
+                    firstSize[i].classList.add("red");
+                    lastSize[i].style.display = "block";
+                }else{
+                    firstSize[i].classList.remove("red");
+                    lastSize[i].style.display = "none";
+                }
+            }
+        };
+    };
+</script>
+<script type="text/javascript">
+    function Ajaxpage(curr){
+        $.getJSON('{:url("ArticleError/index")}', {
+            page: curr || 1
+        }, function(data){      //data是后台返回过来的JSON数据
+            $(".spiner-example").css('display','none'); //数据加载完关闭动画
+            if(data.data==''){
+                $("#list").html('<td colspan="20" style="padding-top:10px;padding-bottom:10px;font-size:16px;text-align:center">暂无数据</td>');
+            }else{
+                list(data.data); //模板赋值
+                laypage({
+                    cont: $('#AjaxPage'),//容器。值支持id名、原生dom对象，jquery对象,
+                    pages:data.pages,//总页数
+                    skip: true,//是否开启跳页
+                    skin: '#1AB5B7',//分页组件颜色
+                    curr: curr || 1,
+                    groups: 3,//连续显示分页数
+                    jump: function(obj, first){
+
+                        if(!first){
+                            Ajaxpage(obj.curr)
+                        }
+                        $('#allpage').html('第'+ obj.curr +'页，共'+ obj.pages +'页');
+                    }
+                });
+            }
+        });
+    }
+
+    Ajaxpage();
+
+    function list(list){
+
+        var tpl = document.getElementById('template').innerHTML;
+        laytpl(tpl).render(list, function(html){
+            document.getElementById('list').innerHTML = html;
+        });
+    }
+    /**
+     * [edit 编辑网点]
+     * sunzhaoquan
+     */
+    function edit_dot(id,art_id){
+        location.href = "/user/Article_error/modify/id/"+id+"/art_id/"+art_id;
+    }
+
+
+</script>
+{/block}

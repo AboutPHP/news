@@ -1,0 +1,145 @@
+{extend name="base/base"/}
+
+{block name="style"}
+    <link rel="stylesheet" href="__STATIC__/index/ucenter/css/news.css" type="text/css" charset="utf-8" />
+{/block}
+
+{block name="body"}
+<section>
+    <!--个人中心-->
+    <div class="personal">
+        <div class="personal-ter clearfloat">
+                {include file="news/left-menu"/}
+            <!--right-->
+            <div class="personal-right">
+                <div class="nav-top">
+                    <ul class="nav-list" data-value="{$status}">
+                        <li class="left status-2"><a href="{:url('news/showlist',['status'=>2])}">已发布</a></li>
+                        <li class="left status-1"><a href="{:url('news/showlist',['status'=>1])}">待审核</a></li>
+                        <li class="left status-0"><a href="{:url('news/showlist',['status'=>0])}">已删除</a></li>
+                        <li class="left status-3"><a href="{:url('news/showlist',['status'=>3])}">未通过</a></li>
+                    </ul>
+                </div>
+                <div class="nav-bottom">
+                    <script id="template" type="text/html">
+                        {{# for(var i=0;i<d.length;i++){  }}
+                        <div class="new-common clearfloat">
+                            <div class="pic-leave">
+                                <img src="/uploads/images/{{d[i].photo}}" />
+                            </div>
+                            <div class="paragraph">
+                                <p class="font1">{{d[i].title}}</p>
+                                <div class="font2 clearfloat">
+                                    <div class="comment">
+                                        <span>分类：<i>{{d[i].name}}</i></span>
+                                        <span class="left"><i style="display: inline-block;width: 5px;height: 5px;background-color:#555555;border-radius: 50%;margin-right: 5px;"></i>浏览量：<i>{{d[i].views}}</i></span>
+                                        <span class="left"><i style="display: inline-block;width: 5px;height: 5px;background-color:#555555;border-radius: 50%;margin-right: 5px;"></i>评论：<i>366</i></span>
+                                        <span class="left"><i style="display: inline-block;width: 5px;height: 5px;background-color:#555555;border-radius: 50%;margin-right: 5px;"></i>更新时间：<i>{{d[i].update_time}}</i></span>
+                                    </div>
+                                    <div class="repair">
+                                        <span onclick="edit_dot('{{d[i].id}}')">[编辑]</span>
+                                        <span onclick="articleDel('{{d[i].id}}','{:action($status)}')">[{:action($status)}]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{# } }}
+                    </script>
+                    <div style="display: block;" class="every-list" id="list"></div>
+                </div>
+                <div id="AjaxPage" style="text-align:right;"></div>
+                <div id="allpage" style=" text-align: right;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+{/block}
+
+{block name="script"}
+
+<script src="__STATIC__/admin/js/layer/layer.js"></script>
+<script src="__STATIC__/admin/js/laypage/laypage.js"></script>
+<script src="__STATIC__/admin/js/laytpl/laytpl.js"></script>
+
+<script type="text/javascript">
+    var personalRight = document.getElementsByClassName("personal-right")[0];
+    var firstSize = personalRight.firstElementChild.firstElementChild.children;
+    var lastSize = personalRight.lastElementChild.children;
+
+    for(var i=0;i<firstSize.length;i++){
+        firstSize[i].onclick = function(){
+            for(var i=0;i<firstSize.length;i++){
+                if(firstSize[i] == this){
+                    firstSize[i].classList.add("red");
+                    lastSize[i].style.display = "block";
+                }else{
+                    firstSize[i].classList.remove("red");
+                    lastSize[i].style.display = "none";
+                }
+            }
+        };
+    };
+</script>
+<script type="text/javascript">
+    function Ajaxpage(curr){
+        var status = $('.nav-list').data('value');
+        $('.status-'+status).addClass('red')
+        $.getJSON('{:url("news/showlist")}', {
+            page: curr || 1,status:status
+        }, function(data){      //data是后台返回过来的JSON数据
+            $(".spiner-example").css('display','none'); //数据加载完关闭动画
+            if(data.data==''){
+                $("#list").html('<td colspan="20" style="padding-top:10px;padding-bottom:10px;font-size:16px;text-align:center">暂无数据</td>');
+            }else{
+                list(data.data); //模板赋值
+                laypage({
+                    cont: $('#AjaxPage'),//容器。值支持id名、原生dom对象，jquery对象,
+                    pages:data.pages,//总页数
+                    skip: true,//是否开启跳页
+                    skin: '#1AB5B7',//分页组件颜色
+                    curr: curr || 1,
+                    groups: 3,//连续显示分页数
+                    jump: function(obj, first){
+
+                        if(!first){
+                            Ajaxpage(obj.curr)
+                        }
+                        $('#allpage').html('第'+ obj.curr +'页，共'+ obj.pages +'页');
+                    }
+                });
+            }
+        });
+    }
+
+    Ajaxpage();
+
+    function list(list){
+
+        var tpl = document.getElementById('template').innerHTML;
+        laytpl(tpl).render(list, function(html){
+            document.getElementById('list').innerHTML = html;
+        });
+    }
+    /**
+     * [edit 编辑网点]
+     */
+    function edit_dot(id){
+        location.href = "/user/news/modify/id/"+id+'.html';
+    }
+
+    function articleDel(id,status){
+        layer.confirm('确认'+status+'此新闻?', {icon: 3, title:'提示'}, function(index){
+            $.getJSON('{:url("news/articleDel")}', {'id' : id,'status' : status}, function(res){
+                console.log(res);
+                if(res.code == 1){
+                    layer.msg(res.msg,{icon:1,time:1500});
+                    Ajaxpage()
+                }else{
+                    layer.msg(res.msg,{icon:0,time:1500});
+                }
+            });
+            layer.close(index);
+        })
+    }
+</script>
+{/block}

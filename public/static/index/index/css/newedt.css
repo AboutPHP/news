@@ -1,0 +1,488 @@
+body {
+  width: 100%;
+  height: auto;
+}
+body section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+body section .newscontent {
+  width: 100%;
+  height: auto;
+  margin-top: 22px;
+}
+body section .newscontent .newscenter {
+  width: 1200px;
+  margin: 0 auto;
+}
+body section .newscontent .newscenter .news-left {
+  float: left;
+}
+body section .newscontent .newscenter .news-left .Carousel {
+  width: 835px;
+  height: 422px;
+  overflow: hidden;
+  position: relative;
+}
+body section .newscontent .newscenter .news-left .Carousel .Carousel-mi {
+  width: auto;
+  position: relative;
+}
+body section .newscontent .newscenter .news-left .Carousel .Carousel-mi > a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+body section .newscontent .newscenter .news-left .Carousel .Carousel-mi > a > img {
+  width: 835px;
+  height: 422px;
+}
+body section .newscontent .newscenter .news-left .Carousel .Carousel-mi > a .Carousel-font {
+  font-size: 36px;
+  color: #ffffff;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+body section .newscontent .newscenter .news-left .Carousel .Carousel-mi a + a {
+  z-index: 1;
+}
+body section .newscontent .newscenter .news-left .Carousel .btnop {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  z-index: 5;
+}
+body section .newscontent .newscenter .news-left .Carousel .btnop > li {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin-left: 20px;
+  background-color: #e7eaee;
+  color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+}
+body section .newscontent .newscenter .news-left .Carousel .btnop .one {
+  background-color: white !important;
+}
+body section .newscontent .newscenter .news-left .Carousel #left,
+body section .newscontent .newscenter .news-left .Carousel #right {
+  position: absolute;
+  top: 150px;
+  padding: 17px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  z-index: 9;
+  cursor: pointer;
+}
+body section .newscontent .newscenter .news-left .Carousel #left {
+  left: 0px;
+}
+body section .newscontent .newscenter .news-left .Carousel #right {
+  right: 0px;
+}
+body section .newscontent .newscenter .news-left .hasnews {
+  width: 835px;
+  height: 44px;
+  background-color: #77b0f6;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 5px;
+  margin-top: 22px;
+  cursor: pointer;
+  position: relative;
+}
+body section .newscontent .newscenter .news-left .hasnews .cancel {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+body section .newscontent .newscenter .news-left .newsList {
+  width: 835px;
+  height: auto;
+  margin-top: 22px;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist {
+  flex: 1.5;
+  -webkit-flex: 1.5;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist:hover {
+  background-color: #e2e7e7;
+  color: #0bb9c2;
+  border-bottom: 2px solid #0bb9c2;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .bot-1 {
+  background-color: #e2e7e7;
+  color: #0bb9c2;
+  border-bottom: 2px solid #0bb9c2;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist1 {
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  flex: 0.8;
+  -webkit-flex: 0.8;
+  position: relative;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist1 .pos {
+  display: none;
+  width: 120px;
+  /*height: 162px;*/
+  background: url("../images/oepr.png") center no-repeat;
+  -webkit-background-size: 120px 162px;
+  background-size: 120px 162px;
+  position: absolute;
+  left: -63px;
+  top: 45px;
+  z-index: 10;
+  /*padding-top: 30px;*/
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist1 .pos .size {
+  text-align: center;
+  height: 48px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+  line-height: 48px;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist1 .pos .size:hover {
+  background-color: #f7f7f7;
+}
+body section .newscontent .newscenter .news-left .newsList .kanver .olist1:hover .pos {
+  display: block;
+}
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom {*/
+  /*width: 100%;*/
+  /*height: auto;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 {*/
+  /*width: 100%;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie {*/
+  /*width: 100%;*/
+  /*position: relative;*/
+  /*border-bottom: 1px solid #dfdfdf;*/
+  /*padding: 28px 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie .list-con {*/
+  /*float: left;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie .list-con > img {*/
+  /*width: 224px;*/
+  /*height: 143px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie .left {*/
+  /*width: 586px;*/
+  /*margin-left: 20px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie > a {*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*display: block;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie:hover {*/
+  /*background-color: #f7f7f7;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie:hover .lun-diop {*/
+  /*color: #5ec1b9;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie:hover .fenxian {*/
+  /*color: #e7781e;*/
+/*}*/
+/*body section .newscontent .newscenter .news-left .newsList .list-bottom .list1 .list-lie1 .list-con1 {*/
+  /*width: 100%;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right {*/
+  /*width: 340px;*/
+  /*float: right;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav {*/
+  /*width: auto;*/
+  /*border: 1px solid #e5e5e5;*/
+  /*padding: 5px 5px 5px 8px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list {*/
+  /*width: 100%;*/
+  /*border-bottom: 1px dashed #e5e5e5;*/
+  /*padding: 5px 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header .jian {*/
+  /*margin: 0 5px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header > a {*/
+  /*display: block;*/
+  /*float: left;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(1) > img {*/
+  /*width: 101px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(2) {*/
+  /*font-size: 18px;*/
+  /*color: #333333;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(3) {*/
+  /*font-size: 16px;*/
+  /*color: #333333;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-header > span {*/
+  /*display: block;*/
+  /*float: right;*/
+  /*font-size: 18px;*/
+  /*margin-left: 10px;*/
+  /*cursor: pointer;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none {*/
+  /*margin-top: 5px;*/
+  /*overflow: hidden;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .con-opwe {*/
+  /*width: auto;*/
+  /*position: relative;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .con-opwe > img {*/
+  /*display: block;*/
+  /*float: left;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .con-opwe > p {*/
+  /*width: 170px;*/
+  /*height: 90px;*/
+  /*overflow: hidden;*/
+  /*margin-left: 10px;*/
+  /*float: left;*/
+  /*font-size: 14px;*/
+  /*color: #333333;*/
+  /*line-height: 20px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .con-opwe > a {*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .ul-point {*/
+  /*width: 97%;*/
+  /*margin-left: 10px;*/
+  /*margin-top: 15px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .ul-point > a > span:nth-child(1) {*/
+  /*display: block;*/
+  /*width: 5px;*/
+  /*height: 5px;*/
+  /*background-color: #006699;*/
+  /*float: left;*/
+  /*margin-top: 5px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list .con-none .ul-point > a > span:nth-child(2) {*/
+  /*display: block;*/
+  /*float: left;*/
+  /*font-size: 14px;*/
+  /*color: #006699;*/
+  /*margin-left: 10px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .news-nav .news-lie .new-list5 {*/
+  /*border-bottom: 0px;*/
+  /*padding-top: 5px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed {*/
+  /*width: 100%;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top {*/
+  /*margin-top: 10px;*/
+  /*width: auto;*/
+  /*border: 1px solid #e5e5e5;*/
+  /*border-top: 5px solid #0bb9c2;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .top-onrt {*/
+  /*width: 94.5%;*/
+  /*height: 48px;*/
+  /*background: #f1f1f1;*/
+  /*font-size: 16px;*/
+  /*color: #333333;*/
+  /*line-height: 48px;*/
+  /*padding-left: 20px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top {*/
+  /*padding-left: 18px;*/
+  /*padding-bottom: 25px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top .first-list {*/
+  /*margin-top: 25px;*/
+  /*width: 100%;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top .first-list > a .colr {*/
+  /*display: inline-block;*/
+  /*width: 23px;*/
+  /*height: 23px;*/
+  /*background-color: #bbbbbb;*/
+  /*text-align: center;*/
+  /*line-height: 23px;*/
+  /*font-size: 16px;*/
+  /*color: #ffffff;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top .first-list > a > span {*/
+  /*display: inline-block;*/
+  /*font-size: 16px;*/
+  /*color: #333333;*/
+  /*margin-left: 15px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top li:nth-child(1) .colr {*/
+  /*background-color: #f61218;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top li:nth-child(2) .colr {*/
+  /*background-color: #ff7a19;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .top .list-top li:nth-child(3) .colr {*/
+  /*background-color: #ff7a19;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .news-tis {*/
+  /*width: auto;*/
+  /*border: 1px solid #e5e5e5;*/
+  /*margin-top: 20px;*/
+  /*padding-bottom: 20px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .news-tis > a > img {*/
+  /*width: 339px;*/
+  /*height: 112px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .news-tis > a .title {*/
+  /*color: black;*/
+  /*display: block;*/
+  /*font-size: 16px;*/
+  /*font-weight: bold;*/
+  /*margin-top: 23px;*/
+  /*margin-bottom: 10px;*/
+  /*padding: 0 15px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .news-tis > a .title-con {*/
+  /*color: black;*/
+  /*display: block;*/
+  /*font-size: 14px;*/
+  /*line-height: 22px;*/
+  /*padding: 0 15px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today {*/
+  /*width: auto;*/
+  /*border-top: 5px solid #0bb9c2;*/
+  /*border-left: 1px solid #e5e5e5;*/
+  /*border-right: 1px solid #e5e5e5;*/
+  /*border-bottom: 1px solid #e5e5e5;*/
+  /*margin-top: 20px;*/
+  /*padding-bottom: 15px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .guang {*/
+  /*width: 94.5%;*/
+  /*height: 48px;*/
+  /*line-height: 48px;*/
+  /*background: #f1f1f1;*/
+  /*font-size: 16px;*/
+  /*padding-left: 20px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every {*/
+  /*width: auto;*/
+  /*padding: 0 10px;*/
+  /*position: relative;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .tile {*/
+  /*margin: 20px 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .tile > span {*/
+  /*font-size: 16px;*/
+  /*color: #0969ba;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .dong {*/
+  /*padding-bottom: 15px;*/
+  /*border-bottom: 1px dashed #e5e5e5;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .dong > img {*/
+  /*display: block;*/
+  /*float: left;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .dong .i-font {*/
+  /*width: 180px;*/
+  /*font-size: 14px;*/
+  /*line-height: 22px;*/
+  /*float: left;*/
+  /*margin-left: 5px;*/
+  /*color: #333333;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every .link {*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every1 {*/
+  /*margin-top: 10px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every1 > a {*/
+  /*display: block;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every1 > a i {*/
+  /*width: 5px;*/
+  /*height: 5px;*/
+  /*background-color: #333333;*/
+  /*float: left;*/
+  /*display: block;*/
+  /*margin-top: 5px;*/
+/*}*/
+/*body section .newscontent .newscenter .news-right .fixed .today .every1 > a > span {*/
+  /*display: block;*/
+  /*folnt-size: 14px;*/
+  /*color: black;*/
+  /*margin-left: 15px;*/
+/*}*/
+.font {
+  font-size: 22px;
+  color: black;
+  line-height:30px;
+}
+.font1 {
+  font-size: 16px;
+  color: #666666;
+  line-height: 25px;
+  margin-top: 15px;
+}
+.point {
+  margin-top: 10px;
+}
+.point .time {
+  display: block;
+  float: left;
+  font-size: 16px;
+  color: #666666;
+}
+.point .pinglun {
+  display: block;
+  float: right;
+  font-size: 16px;
+  color: #666666;
+}

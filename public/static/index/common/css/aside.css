@@ -1,0 +1,260 @@
+/*公共新闻右侧的样式*/
+.news-right {
+    width: 340px;
+    float: right;
+}
+.news-right .news-nav {
+    width: auto;
+    border: 1px solid #e5e5e5;
+    padding: 5px 5px 5px 8px;
+}
+.news-right .news-nav .news-lie .new-list {
+    width: 100%;
+    border-bottom: 1px dashed #e5e5e5;
+    padding: 5px 0;
+}
+.news-right .news-nav .news-lie .new-list .con-header .jian {
+    margin: 0 5px;
+}
+.news-right .news-nav .news-lie .new-list .con-header > a {
+    display: block;
+    float: left;
+}
+.news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(1) > img {
+    width: 101px;
+}
+.news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(2) {
+    font-size: 18px;
+    color: #333333;
+}
+.news-right .news-nav .news-lie .new-list .con-header > a > span:nth-child(3) {
+    font-size: 16px;
+    color: #333333;
+}
+.news-right .news-nav .news-lie .new-list .con-header > span {
+    display: block;
+    float: right;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.news-right .news-nav .news-lie .new-list .con-none {
+    margin-top: 5px;
+    overflow: hidden;
+}
+.news-right .news-nav .news-lie .new-list .con-none .con-opwe {
+    width: auto;
+    position: relative;
+}
+.news-right .news-nav .news-lie .new-list .con-none .con-opwe > img {
+    display: block;
+    float: left;
+}
+.news-right .news-nav .news-lie .new-list .con-none .con-opwe > p {
+    width: 170px;
+    height: 90px;
+    overflow: hidden;
+    margin-left: 10px;
+    float: left;
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+}
+.news-right .news-nav .news-lie .new-list .con-none .con-opwe > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.news-right .news-nav .news-lie .new-list .con-none .ul-point {
+    width: 97%;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.news-right .news-nav .news-lie .new-list .con-none .ul-point > a > span:nth-child(1) {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #006699;
+    float: left;
+    margin-top: 5px;
+}
+.news-right .news-nav .news-lie .new-list .con-none .ul-point > a > span:nth-child(2) {
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: #006699;
+    margin-left: 10px;
+}
+.news-right .news-nav .news-lie .new-list5 {
+    border-bottom: 0px;
+    padding-top: 5px;
+}
+.news-right .fixed {
+    width: 100%;
+}
+.news-right .fixed .top {
+    margin-top: 10px;
+    width: auto;
+    border: 1px solid #e5e5e5;
+    border-top: 5px solid #0bb9c2;
+}
+.news-right .fixed .top .top-onrt {
+    width: 94.5%;
+    height: 48px;
+    background: #f1f1f1;
+    font-size: 16px;
+    color: #333333;
+    line-height: 48px;
+    padding-left: 20px;
+}
+.news-right .fixed .top .list-top {
+    padding-left: 18px;
+    padding-bottom: 25px;
+}
+.news-right .fixed .top .list-top .first-list {
+    margin-top: 25px;
+    width: 100%;
+}
+.news-right .fixed .top .list-top .first-list > a .colr {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: #bbbbbb;
+    text-align: center;
+    line-height: 23px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.news-right .fixed .top .list-top .first-list > a > span {
+    display: inline-block;
+    font-size: 16px;
+    color: #333333;
+    margin-left: 15px;
+}
+.news-right .fixed .top .list-top li:nth-child(1) .colr {
+    background-color: #f61218;
+}
+.news-right .fixed .top .list-top li:nth-child(2) .colr {
+    background-color: #ff7a19;
+}
+.news-right .fixed .top .list-top li:nth-child(3) .colr {
+    background-color: #ff7a19;
+}
+.news-right .fixed .news-tis {
+    width: auto;
+    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.news-right .fixed .news-tis > a > img {
+    width: 339px;
+    height: 112px;
+}
+.news-right .fixed .news-tis > a .title {
+    color: black;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 23px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+.news-right .fixed .news-tis > a .title-con {
+    color: black;
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 15px;
+}
+.news-right .fixed .today {
+    width: auto;
+    border-top: 5px solid #0bb9c2;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+.news-right .fixed .today .guang {
+    width: 94.5%;
+    height: 48px;
+    line-height: 48px;
+    background: #f1f1f1;
+    font-size: 16px;
+    padding-left: 20px;
+}
+.news-right .fixed .today .every {
+    width: auto;
+    padding: 0 10px;
+    position: relative;
+}
+.news-right .fixed .today .every .tile {
+    margin: 20px 0;
+}
+.news-right .fixed .today .every .tile > span {
+    font-size: 16px;
+    color: #0969ba;
+}
+.news-right .fixed .today .every .dong {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.news-right .fixed .today .every .dong > img {
+    display: block;
+    float: left;
+}
+.news-right .fixed .today .every .dong .i-font {
+    width: 180px;
+    font-size: 14px;
+    line-height: 22px;
+    float: left;
+    margin-left: 5px;
+    color: #333333;
+}
+.news-right .fixed .today .every .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.news-right .fixed .today .every1 {
+    margin-top: 10px;
+}
+.news-right .fixed .today .every1 > a {
+    display: block;
+}
+.news-right .fixed .today .every1 > a i {
+    width: 5px;
+    height: 5px;
+    background-color: #333333;
+    float: left;
+    display: block;
+    margin-top: 5px;
+}
+.news-right .fixed .today .every1 > a > span {
+    display: block;
+    folnt-size: 14px;
+    color: black;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
